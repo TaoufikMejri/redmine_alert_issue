@@ -1,0 +1,18 @@
+<% issue_statuses = [ [l('default_issue_status_new'),l('default_issue_status_new')],
+                      [l('default_issue_status_in_progress'),l('default_issue_status_in_progress')],
+                      [l('default_issue_status_resolved'),l('default_issue_status_resolved')],
+                      [l('default_issue_status_feedback'),l('default_issue_status_feedback')],
+                      [l('default_issue_status_closed'),l('default_issue_status_closed')],
+                      [l('default_issue_status_rejected'),l('default_issue_status_rejected')] ] %>
+<table>
+  <tbody>
+  <tr>
+    <th><%= l('label_issue_status') %></th>
+    <td>
+      <%= select_tag "settings_issue_status", options_for_select(issue_statuses),
+                     name: "settings[issue_status]",
+                     value: "#{settings['issue_status']}" %>
+    </td>
+  </tr>
+  </tbody>
+</table>
