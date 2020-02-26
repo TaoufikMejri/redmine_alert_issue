@@ -6,3 +6,6 @@ en:
   label_alert_begin_date: Begin date
   label_alert_end_date: End date
   label_notifications: Notifications
+  field_begin_time: Begin time
+  field_end_time: End time
+

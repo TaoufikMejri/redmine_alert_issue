@@ -1,4 +1,5 @@
 require_dependency 'redmine_alert_issue/hooks'
+require_dependency 'redmine_alert_issue/queries_controller_patch'
 
 Redmine::Plugin.register :redmine_alert_issue do
   name 'Redmine Alert Issue plugin'

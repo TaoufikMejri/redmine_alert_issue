@@ -13,5 +13,9 @@
     <span class="pagination"><%= pagination_links_full @alert_pages, @alert_count %></span>
   <% end %>
 <% end %>
-<%#= context_menu %>
+
+<% content_for :sidebar do %>
+  <%= render :partial => 'sidebar' %>
+<% end %>
+
 

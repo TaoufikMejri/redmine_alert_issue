@@ -4,3 +4,5 @@ fr:
   label_alert_begin_date: Date de debut
   label_alert_end_date: Date de fin
   label_notifications: Notifications
+  field_begin_time: Temps de début
+  field_end_time: Temps de fin
