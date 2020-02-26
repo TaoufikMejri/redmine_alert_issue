@@ -3,3 +3,6 @@ en:
   # my_label: "My label"
   label_alerts: 'Alerts'
   label_issue_status: Issue status
+  label_alert_begin_date: Begin date
+  label_alert_end_date: End date
+  label_notifications: Notifications

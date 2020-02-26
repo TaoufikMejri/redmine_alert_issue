@@ -1,1 +1,17 @@
-<h2>AlertsController#index</h2>
+<h2><%= l(:label_alerts) %></h2>
+
+<%= form_tag(alerts_path, :method => :get, :id => 'query_form') do %>
+  <%= render :partial => 'date_range' %>
+<% end %>
+
+<% if @query.valid? %>
+  <% if @alerts.empty? %>
+    <p class="nodata">Aucune donnée à afficher</p>
+  <% else %>
+    <%= render_query_totals(@query) %>
+    <%= render :partial => 'list', :locals => {:alerts => @alerts, :query => @query} %>
+    <span class="pagination"><%= pagination_links_full @alert_pages, @alert_count %></span>
+  <% end %>
+<% end %>
+<%#= context_menu %>
+

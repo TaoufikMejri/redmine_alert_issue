@@ -1,3 +1,6 @@
 fr:
   label_alerts: 'Alertes'
   label_issue_status: Status de la demande
+  label_alert_begin_date: Date de debut
+  label_alert_end_date: Date de fin
+  label_notifications: Notifications

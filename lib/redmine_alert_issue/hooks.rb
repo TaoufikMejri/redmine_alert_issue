@@ -18,7 +18,7 @@ module RedmineAlertIssue
         finish_work_time = finish_work_time.change(offset: current_zone)
 
         if issue_status == setting_status
-          add_hours = 3
+          add_hours = 2
           next_time = current_time + 2.hours
           if (next_time > finish_work_time) && ((1...5).include? current_wday)
             add_hours = add_hours + 14
@@ -40,6 +40,10 @@ module RedmineAlertIssue
           alert.update_attributes(end_time: DateTime.now)
         end
       end
+    end
+
+    class NotificationsHookListener < Redmine::Hook::ViewListener
+      render_on :view_layouts_base_html_head, :partial => "alerts/layouts_base_html_head"
     end
   end
 end
